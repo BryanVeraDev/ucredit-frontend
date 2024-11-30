@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -22,16 +23,14 @@ const Login = () => {
       );
       const data = await response.json();
       if (response.ok) {
-        console.log(data);
         localStorage.setItem("token", data.access);
-        alert("Inicio de sesión exitoso");
+        toast.success('Bienvenido');
         navigate("/credits");
       } else {
-        console.log(response.body);
-        alert("Credenciales incorrectas");
+        toast.error('Contraseña incorrecta');
       }
     } catch (error) {
-      console.error("Error al iniciar sesión:", error);
+      toast.error("Error al iniciar sesión:", error);
     }
   };
 
