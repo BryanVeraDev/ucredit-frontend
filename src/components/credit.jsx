@@ -29,7 +29,7 @@ const Creditos = () => {
           {credits.map((credit) => (
             <Card key={credit.id} style={{ width: "35rem" }}>
               <Card.Body>
-                <Card.Title>Número de crédito: {credit.id}</Card.Title>
+                <Card.Title>Credit number: {credit.id}</Card.Title>
                 <Card.Text>{credit.description}</Card.Text>
               </Card.Body>
               <ListGroup className="list-group-flush">
