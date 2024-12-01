@@ -6,7 +6,7 @@ const AccordionPayment = ({ data }) => {
   return (
     <Accordion defaultActiveKey="1">
       <Accordion.Item eventKey="0">
-        <Accordion.Header>Ver Plan de Pagos</Accordion.Header>
+        <Accordion.Header>See payment plan</Accordion.Header>
         <Accordion.Body>
           <Table striped bordered hover>
             <thead>

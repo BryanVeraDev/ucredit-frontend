@@ -33,24 +33,24 @@ const Creditos = () => {
                 <Card.Text>{credit.description}</Card.Text>
               </Card.Body>
               <ListGroup className="list-group-flush">
-              <ListGroup.Item>Cliente: {credit.client_info.first_name + " " + credit.client_info.last_name}</ListGroup.Item>
-                <ListGroup.Item>Monto total: {credit.total_amount}</ListGroup.Item>
+              <ListGroup.Item>Client: {credit.client_info.first_name + " " + credit.client_info.last_name}</ListGroup.Item>
+                <ListGroup.Item>Total amount: {credit.total_amount}</ListGroup.Item>
                 <ListGroup.Item>
-                  Número de cuotas: {credit.no_installment}
+                  Number of installment: {credit.no_installment}
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  Fecha de aplicación: {credit.application_date}
+                  Application Date: {credit.application_date}
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  Fecha de inicio:{" "}
-                  {credit.start_date ? credit.start_date : "No disponible"}
+                  Start date:{" "}
+                  {credit.start_date ? credit.start_date : "Not available"}
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  Fecha de fin:{" "}
-                  {credit.end_date ? credit.end_date : "No disponible"}
+                  End date:{" "}
+                  {credit.end_date ? credit.end_date : "Not available"}
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  Estado:{" "}
+                  Status:{" "}
                   {credit.status === "approved" ?
                   <div>
                     <p>{credit.status}</p>
@@ -64,7 +64,7 @@ const Creditos = () => {
           ))}
         </div>
       ) : (
-        <p>No tienes créditos disponibles.</p>
+        <p>You do not have available credits.</p>
       )}
     </div>
   );
