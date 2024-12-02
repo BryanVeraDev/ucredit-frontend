@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import AccordionPayment from "./AccordionPayment";
+import './styles/cards.css';
 
 const Creditos = () => {
   const [credits, setCredits] = useState([]);
@@ -25,7 +26,7 @@ const Creditos = () => {
   return (
     <div>
       {credits.length > 0 ? (
-        <div className="d-flex flex-wrap gap-3">
+        <div className="cards-container">
           {credits.map((credit) => (
             <Card key={credit.id} style={{ width: "35rem" }}>
               <Card.Body>

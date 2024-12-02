@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import './styles/product.css';
+import './styles/cards.css';
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -24,7 +24,7 @@ const Products = () => {
   return (
     <div>
       {products.length > 0 ? (
-        <div className="d-flex flex-wrap gap-3">
+        <div className="cards-container">
           {products.map((product) => (
             <Card key={product.id} style={{ width: "20rem" }}>
               <Card.Body>
