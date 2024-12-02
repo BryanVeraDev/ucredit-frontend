@@ -1,0 +1,23 @@
+.container {
+    background-color: #f8d7da; /* Fondo rojo claro */
+  }
+  
+  h1 {
+    color: #d5a9ad;
+    font-weight: bold;
+  }
+  
+  p {
+    color: #ecdadc;
+  }
+  
+  .btn {
+    background-color: #004085;
+    border-color: #004085;
+  }
+  
+  .btn:hover {
+    background-color: #002752;
+    border-color: #002752;
+  }
+  
