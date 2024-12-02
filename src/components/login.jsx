@@ -25,7 +25,7 @@ const Login = () => {
       if (response.ok) {
         localStorage.setItem("token", data.access);
         toast.success('Bienvenido');
-        navigate("/credits");
+        navigate("/products");
       } else {
         toast.error('Contraseña incorrecta');
       }
