@@ -1,6 +1,6 @@
-// eslint-disable-next-lineimport logo from './logo.svg';
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import PrivateRoute from './components/PrivateRoute';
 import Login from './components/login';
 import Credits from './components/credit';
 import Products from './components/product';
@@ -10,9 +10,13 @@ function App() {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/credits" element={<Credits />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="*" element={<Login />} />
+
+        <Route element={<Layout />}>
+          <Route element={<PrivateRoute />}>
+            <Route path="/credits" element={<Credits />} />
+            <Route path="/products" element={<Products />} />
+          </Route>
+        </Route>
       </Routes>
     </Router>
   );

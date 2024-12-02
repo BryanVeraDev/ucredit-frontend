@@ -25,15 +25,13 @@ const Login = () => {
       const data = await response.json();
       if (response.ok) {
         localStorage.setItem("token", data.access);
-        toast.success("Bienvenido");
+        toast.success("Welcome");
         navigate("/credits");
       } else {
-        toast.error("Contraseña incorrecta");
-        setEmail("");
-        setPassword("");
+        toast.error("Incorrect password");
       }
     } catch (error) {
-      toast.error("Error al iniciar sesión:", error);
+      toast.error("Error logging in:", error);
     }
   };
 
@@ -43,17 +41,17 @@ const Login = () => {
         <div className="col">
           <h1 className="pic animate__animated animate__bounce">Ucredit</h1>
           <h2 className="textoP animate__animated animate__fadeIn">
-            ¡Gestiona tus créditos de manera fácil y segura!
+            Manage your credits easily and safely!
           </h2>
         </div>
         <div className="col-auto shadow bg-light mx-4 rounded w-50 h-80 py-3 animate__animated animate__bounce">
-          <h1>Iniciar Sesión</h1>
+          <h1>Login</h1>
 
           <Form onSubmit={handleSubmit} className="p-4">
             <Form.Group className="mb-3" controlId="formBasicUsername">
               <Form.Control
                 type="email"
-                placeholder="Ingrese su email"
+                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -63,7 +61,7 @@ const Login = () => {
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Control
                 type="password"
-                placeholder="Ingrese su contraseña"
+                placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -72,7 +70,7 @@ const Login = () => {
 
             <div className="col text-center mb-4">
               <Button variant="outline-success" type="submit" className="w-100">
-                Ingresar
+                Get into
               </Button>
             </div>
           </Form>
