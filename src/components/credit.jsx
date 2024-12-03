@@ -4,7 +4,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import AccordionPayment from "./AccordionPayment";
 import './styles/cards.css';
 
-const Creditos = () => {
+const Credits = () => {
   const [credits, setCredits] = useState([]);
 
   useEffect(() => {
@@ -71,4 +71,4 @@ const Creditos = () => {
   );
 };
 
-export default Creditos;
+export default Credits;
